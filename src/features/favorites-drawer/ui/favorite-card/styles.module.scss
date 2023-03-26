@@ -1,0 +1,25 @@
+.card {
+    @apply flex items-center justify-between p-2 border rounded mb-2;
+
+    &Left {
+        img {
+            @apply w-[100px] h-[125px];
+        }
+    }
+
+    &Right {
+        @apply ml-2;
+        h2 {
+            @apply text-base font-medium;
+        }
+        h3 {
+            @apply mt-2 text-xl font-medium text-gray-500;
+        }
+    }
+
+    .closeIcon {
+        svg {
+            @apply mr-2 w-[20px] h-[20px];
+        }
+    }
+}

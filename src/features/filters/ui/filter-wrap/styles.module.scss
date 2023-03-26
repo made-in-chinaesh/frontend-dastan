@@ -1,0 +1,25 @@
+.filter {
+    @apply flex flex-col;
+    &Top {
+        @apply flex items-center justify-between my-2;
+        span {
+            @apply font-medium;
+        }
+        svg {
+            @apply w-[20px] h-[20px] transition-[300ms] rotate-180 cursor-pointer;
+        }
+    }
+    &Content {
+        @apply w-full max-h-[600px] overflow-auto;
+    }
+}
+.filterActive {
+    .filterTop {
+        svg {
+            @apply rotate-0;
+        }
+    }
+    .filterContent {
+        @apply hidden;
+    }
+}

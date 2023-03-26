@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import './styles/_vars.scss';
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html,
+body {
+    width: 100%;
+    position: relative !important;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif !important;
+}
+
+img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.container {
+    width: var(--content-width);
+    max-width: 100%;
+    margin: 0 auto;
+    @media (max-width: 1400px) {
+        width: 100%;
+        padding: 0 2%;
+    }
+}
+
+
+

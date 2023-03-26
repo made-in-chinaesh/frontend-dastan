@@ -1,0 +1,12 @@
+.logo {
+    span {
+        @apply text-3xl relative flex items-center justify-center font-medium my-2;
+
+        @media (max-width: 630px) {
+            @apply text-2xl;
+        }
+        &::before {
+            @apply content-[''] z-[-1] absolute w-[80px] h-full bg-red-500 rounded-[50%];
+        }
+    }
+}

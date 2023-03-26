@@ -1,0 +1,15 @@
+.card {
+    @apply cursor-pointer;
+    &ImageBlock {
+        @apply bg-gray-200;
+        img {
+            @apply w-full h-[360px];
+        }
+    }
+    .title {
+        @apply text-sm;
+    }
+    span {
+        @apply font-medium text-gray-500 mt-5;
+    }
+}

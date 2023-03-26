@@ -1,0 +1,21 @@
+.container {
+    @apply flex flex-col;
+    .title {
+        @apply text-xl font-medium;
+    }
+    .list {
+        @apply flex flex-col;
+        .reviewCard {
+            @apply border-t last:border-b;
+            div {
+                @apply flex items-center py-2;
+                img {
+                    @apply w-[50px] h-[50px] rounded-[50%];
+                }
+                h2 {
+                    @apply ml-2;
+                }
+            }
+        }
+    }
+}

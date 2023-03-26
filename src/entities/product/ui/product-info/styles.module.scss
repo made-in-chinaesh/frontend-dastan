@@ -1,0 +1,23 @@
+.container {
+    @apply w-auto;
+    .title {
+        @apply text-4xl font-medium;
+    }
+    .price {
+        @apply text-5xl font-medium my-4;
+    }
+    .description {
+        @apply font-medium;
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        .title {
+            @apply text-3xl;
+        }
+        .price {
+            @apply text-4xl;
+        }
+    }
+}

@@ -1,0 +1,6 @@
+.btn {
+    @apply w-[40px] h-[40px] cursor-pointer flex items-center justify-center border rounded-[50%] text-gray-300 hover:bg-red-500 hover:text-white ml-2;
+    svg {
+        @apply w-[30px] h-[30px];
+    }
+}

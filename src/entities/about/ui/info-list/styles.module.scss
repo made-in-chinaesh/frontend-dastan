@@ -1,0 +1,61 @@
+.list {
+    @apply flex flex-col;
+    &Card {
+        @apply flex justify-between py-4 border-b last:border-b-0;
+        img {
+            @apply w-[600px];
+        }
+        div {
+            @apply p-10;
+            h2 {
+                @apply text-2xl font-medium;
+            }
+            p {
+                @apply text-xl my-2;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .list {
+        &Card {
+            img {
+                @apply w-[400px];
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .list {
+        &Card {
+            img {
+                @apply w-[300px];
+            }
+            div {
+                h2 {
+                    @apply text-xl;
+                }
+                p {
+                    @apply text-lg;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .list {
+        &Card {
+            @apply flex-col;
+            img {
+                @apply w-full;
+            }
+
+            div {
+                @apply p-0 my-4;
+            }
+        }
+    }
+}

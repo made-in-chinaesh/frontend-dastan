@@ -1,0 +1,15 @@
+.container {
+    @apply hidden fixed z-10 bottom-0 left-0 bg-white border-t w-full p-2 items-center justify-center;
+    @media (max-width: 600px) {
+        @apply flex;
+    }
+    a {
+        @apply mx-2 flex flex-col items-center;
+        span {
+            @apply text-sm;
+        }
+    }
+    .active {
+        @apply text-red-500;
+    }
+}

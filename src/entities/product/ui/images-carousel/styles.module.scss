@@ -1,0 +1,18 @@
+.container {
+    @apply flex flex-col;
+    .swiper {
+        @apply my-2 border max-w-full;
+        .slide {
+            @apply cursor-pointer max-h-[800px];
+            img {
+                @apply h-full w-full;
+            }
+        }
+    }
+    .controllers {
+        @apply flex items-center justify-between;
+        button {
+            @apply m-0;
+        }
+    }
+}

@@ -1,0 +1,42 @@
+.container {
+    @apply mt-10;
+    .product {
+        @apply flex;
+        &Carousel {
+            @apply w-1/2;
+        }
+        &Info {
+            @apply p-10 w-1/2 flex flex-col;
+        }
+    }
+    .tabs {
+        @apply w-3/4;
+    }
+}
+
+@media (max-width: 900px) {
+    .container {
+        .product {
+            @apply flex-col;
+            &Carousel {
+                @apply w-full;
+            }
+            &Info {
+                @apply w-full;
+            }
+        }
+        .tabs {
+            @apply w-full;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        .product {
+            &Info {
+                @apply px-0;
+            }
+        }
+    }
+}

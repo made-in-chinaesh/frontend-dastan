@@ -1,0 +1,33 @@
+.list {
+    @apply flex flex-col;
+    &Title {
+        @apply my-2;
+
+        @media (max-width: 500px) {
+            @apply text-xl;
+        }
+    }
+    .row {
+        @apply grid grid-cols-6 gap-4;
+
+        @media (max-width: 840px) {
+            @apply grid-cols-5;
+        }
+
+        @media (max-width: 670px) {
+            @apply grid-cols-4;
+        }
+
+        @media (max-width: 540px) {
+            @apply grid-cols-3;
+        }
+
+        &Card {
+            @apply p-2 border rounded-[20px] font-medium text-center text-lg transition-[500ms] hover:bg-[red] hover:text-white;
+
+            @media (max-width: 500px) {
+                @apply text-sm;
+            }
+        }
+    }
+}

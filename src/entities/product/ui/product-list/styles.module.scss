@@ -1,0 +1,64 @@
+.list {
+    @apply grid grid-cols-4 gap-4 mt-4;
+
+    @media (max-width: 1300px) {
+        @apply grid-cols-3;
+    }
+
+    @media (max-width: 1060px) {
+        .card {
+            img {
+                @apply h-[300px];
+            }
+        }
+    }
+
+    @media (max-width: 1000px) {
+        .card {
+            img {
+                @apply h-[360px];
+            }
+        }
+    }
+
+    @media (max-width: 800px) {
+        @apply grid-cols-2;
+        .card {
+            img {
+                @apply h-[400px];
+            }
+        }
+    }
+
+    @media (max-width: 560px) {
+        .card {
+            img {
+                @apply h-[360px];
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+        .card {
+            img {
+                @apply h-[320px];
+            }
+        }
+    }
+
+    @media (max-width: 420px) {
+        .card {
+            img {
+                @apply h-[300px];
+            }
+        }
+    }
+
+    @media (max-width: 380px) {
+        .card {
+            img {
+                @apply h-[260px];
+            }
+        }
+    }
+}

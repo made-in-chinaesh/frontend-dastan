@@ -1,0 +1,8 @@
+.heading {
+    @apply flex items-center justify-between my-2;
+    &Title {
+        @media (max-width: 500px) {
+            @apply text-2xl;
+        }
+    }
+}

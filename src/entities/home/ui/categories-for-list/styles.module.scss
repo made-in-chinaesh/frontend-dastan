@@ -1,0 +1,20 @@
+.list {
+    @apply flex flex-col;
+    &Title {
+        @apply my-2;
+
+        @media (max-width: 500px) {
+            @apply text-xl;
+        }
+    }
+    .row {
+        @apply grid grid-cols-3 gap-4;
+        &Card {
+            @apply p-2 border rounded-[20px] font-medium text-center text-lg transition-[500ms] hover:bg-[red] hover:text-white;
+
+            @media (max-width: 500px) {
+                @apply text-sm;
+            }
+        }
+    }
+}

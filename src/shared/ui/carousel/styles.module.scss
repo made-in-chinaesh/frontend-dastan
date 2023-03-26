@@ -1,0 +1,14 @@
+.carousel {
+    @apply w-full my-2;
+    .containerTop {
+        @apply flex items-center justify-between my-4;
+        .title {
+            @media (max-width: 500px) {
+                @apply text-xl;
+            }
+        }
+    }
+    .swiper {
+        @apply flex flex-col;
+    }
+}

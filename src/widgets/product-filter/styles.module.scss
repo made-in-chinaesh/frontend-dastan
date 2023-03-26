@@ -1,0 +1,11 @@
+.filter {
+    @apply w-full border-r rounded pr-2;
+
+    @media (max-width: 1000px) {
+        @apply border-r-0;
+    }
+}
+.sticky {
+    position: sticky;
+    top: 0;
+}

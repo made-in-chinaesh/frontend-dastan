@@ -1,0 +1,29 @@
+.footer {
+    @apply grid grid-cols-3 gap-4 my-2;
+
+    @media (max-width: 720px) {
+        @apply grid grid-cols-1;
+    }
+
+    .title {
+        @apply text-2xl mb-2;
+
+        @media (max-width: 720px) {
+            @apply text-xl;
+        }
+
+    }
+
+    ul {
+        @apply leading-8;
+        li {
+            @apply font-medium;
+        }
+    }
+
+    &FirstBlock {
+        p {
+            @apply text-lg font-medium;
+        }
+    }
+}

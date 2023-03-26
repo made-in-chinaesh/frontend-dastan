@@ -1,0 +1,39 @@
+.list {
+    @apply grid grid-cols-5 gap-4 my-4;
+
+    @media (max-width: 1200px) {
+        @apply grid-cols-4;
+    }
+
+    @media (max-width: 950px) {
+        @apply grid-cols-3;
+    }
+
+    @media (max-width: 690px) {
+        @apply grid-cols-2;
+    }
+
+}
+
+@media (max-width: 460px) {
+    .list {
+        &Card {
+            img {
+                @apply h-[250px];
+            }
+            h2 {
+                @apply text-base font-medium;
+            }
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .list {
+        &Card {
+            img {
+                @apply h-[230px];
+            }
+        }
+    }
+}

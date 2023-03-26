@@ -1,0 +1,9 @@
+.container {
+    display: grid;
+    grid-template-columns: 300px auto;
+    grid-gap: 20px;
+
+    @media (max-width: 1000px) {
+        @apply flex flex-col;
+    }
+}

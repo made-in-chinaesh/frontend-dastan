@@ -1,0 +1,33 @@
+.carousel {
+    &Card {
+        @media (max-width: 1200px) {
+            img {
+                @apply h-[300px];
+            }
+        }
+
+        @media (max-width: 700px) {
+            img {
+                @apply h-[360px];
+            }
+        }
+
+        @media (max-width: 480px) {
+            img {
+                @apply h-[320px];
+            }
+        }
+
+        @media (max-width: 420px) {
+            img {
+                @apply h-[300px];
+            }
+        }
+
+        @media (max-width: 380px) {
+            img {
+                @apply h-[260px];
+            }
+        }
+    }
+}
