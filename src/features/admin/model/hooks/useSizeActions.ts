@@ -7,7 +7,6 @@ import {
 	sizeStore,
 } from 'entities/product-sizes'
 import { useToast } from '@chakra-ui/react'
-import { parseJSON } from 'shared/helpers'
 
 export const useSizeActions = () => {
 	const [isLoadingCreateSize, setIsLoadingCreateSize] =

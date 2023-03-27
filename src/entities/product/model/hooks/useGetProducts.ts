@@ -40,6 +40,8 @@ export const useGetProducts = () => {
 	}
 
 	useEffect(fetchProducts, [
+		paginationModel,
+		productModel,
 		paginationModel.page,
 		filterModel.filterCategory,
 		filterModel.filterCategoryFor,

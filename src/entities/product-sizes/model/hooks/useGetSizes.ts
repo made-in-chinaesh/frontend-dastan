@@ -23,7 +23,7 @@ export const useGetSizes = () => {
 
 	const sizesForFilter = [{ size: 'Все', _id: 'Все' }, ...sizeModel.sizes]
 
-	useEffect(fetchSizes, [])
+	useEffect(fetchSizes, [sizeModel])
 
 	return {
 		isLoading,

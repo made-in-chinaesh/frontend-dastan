@@ -47,6 +47,7 @@ export const Footer: FC = () => {
 								<a
 									href='https://api.whatsapp.com/send?phone=996771134803&source=website&text=Здраствуйте!&data=id%3A%20871500'
 									target='_blank'
+									rel='noreferrer'
 								>
 									WhatsApp: +996732332211
 								</a>
