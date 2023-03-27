@@ -39,7 +39,7 @@ export const bottomNavbarItems = [
 export const BottomNavbar: FC = () => {
 	return (
 		<>
-			<div className='w-full h-[51px]'></div>
+			<div className={styles.hiddenBlock}></div>
 			<div className={styles.container}>
 				{bottomNavbarItems.map(({ id, to, name, icon }) => (
 					<NavLink

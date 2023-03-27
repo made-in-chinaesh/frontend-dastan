@@ -3,7 +3,8 @@
 
     &Left {
         img {
-            @apply w-[100px] h-[125px];
+            width: 100px;
+            height: 125px;
         }
     }
 
@@ -19,7 +20,9 @@
 
     .closeIcon {
         svg {
-            @apply mr-2 w-[20px] h-[20px];
+            @apply mr-2;
+            width: 20px;
+            height: 20px;
         }
     }
 }

@@ -1,6 +1,4 @@
 import { FC, useContext } from 'react'
-import classNames from 'classnames'
-import styles from './styles.module.scss'
 import { Logo } from '../logo'
 import { NavLink } from 'react-router-dom'
 import {
@@ -13,6 +11,9 @@ import { observer } from 'mobx-react-lite'
 import { navigationItems, Routes } from 'shared/data-items'
 import { FavoritesDrawer } from 'features/favorites-drawer'
 import { useDisclosure } from '@chakra-ui/react'
+import { Container } from '../container'
+
+import styles from './styles.module.scss'
 
 export const Navbar: FC = observer(() => {
 	const searchModel = useContext(searchStore)
@@ -23,7 +24,7 @@ export const Navbar: FC = observer(() => {
 		<>
 			<nav>
 				<section className={styles.section}>
-					<div className={classNames('container', styles.top)}>
+					<Container className={styles.top}>
 						<Logo />
 						<ul>
 							{navigationItems.map(({ id, name, to }) => (
@@ -50,7 +51,7 @@ export const Navbar: FC = observer(() => {
 								/>
 							</div>
 						</div>
-					</div>
+					</Container>
 				</section>
 			</nav>
 			<FavoritesDrawer isOpen={isOpen} onClose={onClose} />

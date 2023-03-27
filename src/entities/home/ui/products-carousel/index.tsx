@@ -12,7 +12,7 @@ export const ProductsCarousel: FC = () => {
 	return (
 		<Carousel title='Наши продукты' className={styles.carousel}>
 			{isLoading ? (
-				<Loader className='h-[40vh]' />
+				<Loader className={styles.loader} />
 			) : (
 				products.map(product => (
 					<SwiperSlide key={product._id}>

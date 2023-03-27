@@ -1,9 +1,12 @@
 .container {
     @apply w-full h-screen flex items-center justify-center;
     &Block {
-        @apply w-[400px] mx-2 flex flex-col text-center;
+        @apply mx-2 flex flex-col text-center;
+        width: 400px;
         &Title {
-            @apply text-6xl font-bold leading-[70px];
+            @apply text-6xl font-bold;
+            line-height: 70px;
+
 
             @media (max-width: 430px) {
                 @apply text-5xl;

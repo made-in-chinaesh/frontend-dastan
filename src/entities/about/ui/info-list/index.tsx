@@ -1,5 +1,6 @@
-import { aboutInfo } from 'shared/data-items'
 import { FC } from 'react'
+import { aboutInfo } from 'shared/data-items'
+
 import styles from './styles.module.scss'
 
 export const InfoList: FC = () => {

@@ -6,7 +6,13 @@
             @apply text-2xl;
         }
         &::before {
-            @apply content-[''] z-[-1] absolute w-[80px] h-full bg-red-500 rounded-[50%];
+            content: '';
+            position: absolute;
+            z-index: -1;
+            width: 80px;
+            height: 100%;
+            background-color: red;
+            border-radius: 50%;
         }
     }
 }

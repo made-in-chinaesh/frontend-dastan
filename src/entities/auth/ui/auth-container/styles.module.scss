@@ -1,6 +1,8 @@
 .container {
-    @apply flex items-center justify-center h-[60vh];
+    @apply flex items-center justify-center;
+    height: 60vh;
     .form {
-        @apply w-[500px] flex flex-col p-4 mx-auto;
+        @apply flex flex-col p-4 mx-auto;
+        width: 600px;
     }
 }

@@ -13,7 +13,7 @@ nav {
             a {
                 @apply uppercase;
                 li {
-                    @apply p-2 transition-[300ms] border-b-0 hover:border-b-2 hover:border-red-500;
+                    @apply p-2 transition-all border-b-0 hover:border-b-2 hover:border-red-500;
                 }
             }
         }
@@ -27,7 +27,9 @@ nav {
                     @apply flex items-center justify-center;
                 }
                 svg {
-                    @apply w-[20px] h-[20px] ml-2 cursor-pointer;
+                    @apply ml-2 cursor-pointer;
+                    width: 20px;
+                    height: 20px;
                 }
             }
         }

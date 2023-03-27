@@ -1,7 +1,7 @@
 import { FC, FormHTMLAttributes, PropsWithChildren } from 'react'
+import { Container } from 'shared/ui'
 
 import styles from './styles.module.scss'
-import { Container } from 'shared/ui'
 
 export const AuthContainer: FC<PropsWithChildren<FormHTMLAttributes<{}>>> = ({
 	children,

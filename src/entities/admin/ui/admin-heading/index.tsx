@@ -1,5 +1,5 @@
-import { Title } from 'shared/ui'
 import { FC } from 'react'
+import { Title } from 'shared/ui'
 
 import styles from './styles.module.scss'
 

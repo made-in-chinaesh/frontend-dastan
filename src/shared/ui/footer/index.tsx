@@ -1,6 +1,7 @@
 import { FC } from 'react'
 import { Logo } from '../logo'
 import { Title } from '../title'
+import { Container } from '../container'
 
 import styles from './styles.module.scss'
 import { Link } from 'react-router-dom'
@@ -8,7 +9,7 @@ import { Link } from 'react-router-dom'
 export const Footer: FC = () => {
 	return (
 		<footer>
-			<div className='container'>
+			<Container>
 				<div className={styles.footer}>
 					<div className={styles.footerFirstBlock}>
 						<Logo />
@@ -53,7 +54,7 @@ export const Footer: FC = () => {
 						</ul>
 					</div>
 				</div>
-			</div>
+			</Container>
 		</footer>
 	)
 }

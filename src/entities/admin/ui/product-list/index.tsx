@@ -1,5 +1,5 @@
-import { FC, useContext } from 'react'
-import { ProductCard, productStore, useGetProducts } from 'entities/product'
+import { FC } from 'react'
+import { ProductCard, useGetProducts } from 'entities/product'
 import { Loader } from 'shared/ui'
 import { Pagination } from 'features/pagination'
 import { observer } from 'mobx-react-lite'

@@ -9,6 +9,8 @@ import {
 	ModalOverlay,
 } from '@chakra-ui/react'
 
+import styles from './styles.module.scss'
+
 interface ModalProps {
 	title: string
 	size?: Size
@@ -48,9 +50,7 @@ export const Modal: FC<PropsWithChildren<ModalProps>> = ({
 			<ModalOverlay />
 			<ModalContent>
 				<ModalHeader>{title}</ModalHeader>
-				<ModalBody className='max-h-[800px] overflow-auto'>
-					{children}
-				</ModalBody>
+				<ModalBody className={styles.modalBody}>{children}</ModalBody>
 				<ModalFooter>
 					<Button colorScheme='red' onClick={onClose}>
 						Закрыть

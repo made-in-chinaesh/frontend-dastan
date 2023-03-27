@@ -15,9 +15,11 @@
     }
     span {
         height: var(--size);
-        @apply w-[40px] flex items-center justify-center;
+        @apply flex items-center justify-center;
+        width: 40px;
     }
     .pages {
-        @apply border-l border-r w-[60px];
+        @apply border-l border-r;
+        width: 60px;
     }
 }

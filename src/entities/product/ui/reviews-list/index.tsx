@@ -1,8 +1,8 @@
 import { FC } from 'react'
-import styles from './styles.module.scss'
 import { IReview } from 'entities/product/index'
 import { FilterWrap } from 'features/filters'
-import { observer } from 'mobx-react-lite'
+
+import styles from './styles.module.scss'
 
 interface ReviewsListProps {
 	reviews: IReview[]

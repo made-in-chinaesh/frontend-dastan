@@ -1,10 +1,11 @@
-import { FC, useRef, useState } from 'react'
-import classNames from 'classnames'
-import styles from './styles.module.scss'
+import { FC, useRef } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import SwiperClass, { Navigation } from 'swiper'
 import { SliderButton } from 'shared/ui/slider-button'
 import { API_URL } from 'shared/config'
+
+import classNames from 'classnames'
+import styles from './styles.module.scss'
 
 interface ImagesCarouselProps {
 	images: string[]

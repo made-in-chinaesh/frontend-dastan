@@ -6,11 +6,14 @@
             @apply font-medium;
         }
         svg {
-            @apply w-[20px] h-[20px] transition-[300ms] rotate-180 cursor-pointer;
+            @apply transition-all rotate-180 cursor-pointer;
+            width: 20px;
+            height: 20px;
         }
     }
     &Content {
-        @apply w-full max-h-[600px] overflow-auto;
+        @apply w-full overflow-auto;
+        max-height: 600px;
     }
 }
 .filterActive {

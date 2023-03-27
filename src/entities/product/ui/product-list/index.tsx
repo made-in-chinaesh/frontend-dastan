@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { ProductCard } from 'entities/product/ui/product-card'
+import { ProductCard } from '../product-card'
 import { useGetProducts } from '../../model'
 import { Loader } from 'shared/ui'
 import { Pagination } from 'features/pagination'
@@ -13,7 +13,7 @@ export const ProductList: FC = observer(() => {
 	return (
 		<div>
 			{isLoading ? (
-				<Loader className='h-[60vh]' />
+				<Loader className={styles.loader} />
 			) : (
 				<>
 					<div className={styles.list}>
@@ -26,10 +26,8 @@ export const ProductList: FC = observer(() => {
 						))}
 					</div>
 					{!products.length ? (
-						<div className='h-[60vh] flex items-center justify-center'>
-							<h2 className='text-4xl font-medium text-center'>
-								Нет товаров по таким фильтрам
-							</h2>
+						<div className={styles.productEmpty}>
+							<h2>Нет товаров по таким фильтрам</h2>
 						</div>
 					) : (
 						''

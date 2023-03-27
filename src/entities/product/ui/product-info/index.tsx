@@ -1,8 +1,9 @@
 import { FC } from 'react'
 import { IProduct } from '../../model'
 import { Chip } from 'shared/ui'
-import styles from './styles.module.scss'
 import { FilterWrap } from 'features/filters'
+
+import styles from './styles.module.scss'
 
 interface ProductInfoProps {
 	product: IProduct

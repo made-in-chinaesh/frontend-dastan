@@ -4,7 +4,7 @@ import { Tab, TabList, TabPanel, TabPanels, Tabs } from '@chakra-ui/react'
 import { FirstTab, SecondTab, ThirdTab } from './tabs'
 import { useForm } from 'react-hook-form'
 import { ICreateProductForm, IInfo } from 'entities/product'
-import { useProductActions } from 'features/admin'
+import { useProductActions } from '../../model'
 
 interface CreateProductModalProps {
 	isOpen: boolean

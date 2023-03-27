@@ -1,8 +1,10 @@
-import { FC, useContext } from 'react'
+import { FC } from 'react'
 import { Button } from '@chakra-ui/react'
 import { AddToFavorite } from '../add-to-favorite'
-import { IProduct, productStore } from 'entities/product'
+import { IProduct } from 'entities/product'
 import { useLocation } from 'react-router-dom'
+
+import styles from './styles.module.scss'
 
 interface ProductOrderProps {
 	product: IProduct
@@ -15,14 +17,11 @@ export const ProductOrder: FC<ProductOrderProps> = ({ product }) => {
 
 	return (
 		<div>
-			<div>
-				<h2 className='mb-2 font-medium'>Размеры</h2>
+			<div className={styles.containerSizes}>
+				<h2>Размеры</h2>
 				<div className='flex items-center'>
 					{product.sizes.map(item => (
-						<div
-							key={item._id}
-							className='w-[40px] h-[40px] flex items-center justify-center border rounded-[50%] text-lg mr-2 cursor-pointer transition-[500ms] hover:bg-red-500 hover:text-white'
-						>
+						<div key={item._id} className={styles.size}>
 							{item.size}
 						</div>
 					))}

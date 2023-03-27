@@ -23,7 +23,7 @@
         }
 
         &Card {
-            @apply p-2 border rounded-[20px] font-medium text-center text-lg transition-[500ms] hover:bg-[red] hover:text-white;
+            @apply p-2 border rounded-xl font-medium text-center text-lg transition-all hover:bg-red-500 hover:text-white;
 
             @media (max-width: 500px) {
                 @apply text-sm;

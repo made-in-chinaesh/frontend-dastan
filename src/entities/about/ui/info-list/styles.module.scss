@@ -3,7 +3,7 @@
     &Card {
         @apply flex justify-between py-4 border-b last:border-b-0;
         img {
-            @apply w-[600px];
+            width: 600px;
         }
         div {
             @apply p-10;
@@ -21,7 +21,7 @@
     .list {
         &Card {
             img {
-                @apply w-[400px];
+               width: 400px;
             }
         }
     }
@@ -31,7 +31,7 @@
     .list {
         &Card {
             img {
-                @apply w-[300px];
+               width: 300px;
             }
             div {
                 h2 {
@@ -48,7 +48,7 @@
 @media (max-width: 750px) {
     .list {
         &Card {
-            @apply flex-col;
+            @apply flex flex-col;
             img {
                 @apply w-full;
             }

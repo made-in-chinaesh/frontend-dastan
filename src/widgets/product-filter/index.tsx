@@ -5,6 +5,7 @@ import {
 	DefaultFiltersButton,
 } from 'features/filters'
 import { SizesFilter } from 'features/filters'
+
 import styles from './styles.module.scss'
 
 export const ProductFilter: FC = () => {
