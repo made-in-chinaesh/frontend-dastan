@@ -53,7 +53,7 @@ export const createFilesRequest = async (
 	images: any,
 	directoryName: string
 ) => {
-	const response = await apiInstance.post(
+	const response = await authApiInstance.post(
 		`/api/file/create/${directoryName}`,
 		images
 	)
@@ -61,7 +61,7 @@ export const createFilesRequest = async (
 }
 
 export const deleteFilesRequest = async (filePath: string) => {
-	return await apiInstance.post('/api/file/remove', {
+	return await authApiInstance.post('/api/file/remove', {
 		filepath: filePath,
 	})
 }
