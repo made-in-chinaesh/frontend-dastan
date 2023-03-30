@@ -15,7 +15,7 @@ export const AddToFavorite: FC<AddToFavoriteProps> = ({ product }) => {
 
 	useEffect(() => {
 		checkIsFavorite(product._id)
-	}, [product._id])
+	}, [product._id, checkIsFavorite])
 
 	const onSubmit = () => {
 		if (isFavorite) {

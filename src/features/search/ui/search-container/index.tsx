@@ -51,7 +51,9 @@ export const SearchContainer: FC = observer(() => {
 				) : !debouncedValue.length ? (
 					''
 				) : (
-					<ProductsList products={products} />
+					<div className='overflow-auto'>
+						<ProductsList products={products} />
+					</div>
 				)}
 				{debouncedValue.length && !isLoading && !products.length ? (
 					<h2 className='text-3xl text-center mt-40'>
