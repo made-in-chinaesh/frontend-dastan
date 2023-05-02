@@ -20,7 +20,7 @@ export const SearchContainer: FC = observer(() => {
 		actions: { searchProducts },
 	} = useSearchProducts()
 
-	const { debouncedValue } = useDebounce(value, 500)
+	const { debouncedValue } = useDebounce(value, 600)
 
 	useEffect(() => {
 		if (searchModel.isOpen) {

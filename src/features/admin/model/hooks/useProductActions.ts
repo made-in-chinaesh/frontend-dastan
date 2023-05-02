@@ -61,7 +61,7 @@ export const useProductActions = () => {
 	}
 
 	const deleteProduct = (product: IProduct) => {
-		const filePath = product.images[1].split('/')
+		const filePath = product.images[0].split('/')
 		const newFilePath = filePath[2]
 
 		const request = deleteProductRequest(product._id)
