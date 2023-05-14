@@ -1,19 +1,33 @@
 .container {
-    @apply flex flex-col;
-    .swiper {
-        @apply my-2 border max-w-full;
-        .slide {
-            @apply cursor-pointer;
-            max-height: 800px;
-            img {
-                @apply h-full w-full;
+    .swiperContainer {
+        @apply flex items-center relative;
+        .swiper {
+            @apply my-2 border max-w-full;
+            .slide {
+                @apply cursor-pointer;
+                max-height: 800px;
+                img {
+                    @apply h-full w-full;
+                }
             }
         }
-    }
-    .controllers {
-        @apply flex items-center justify-between;
-        button {
-            @apply m-0;
+        .leftSwiperBtn {
+            @apply absolute z-20 left-0 m-0 border-0 hover:bg-inherit hover:text-black;
+            width: 70px;
+            height: 70px;
+            svg {
+                width: 60px;
+                height: 60px;
+            }
+        }
+        .rightSwiperBtn {
+            @apply absolute z-20 right-0 m-0 border-0 hover:bg-inherit hover:text-black;
+            width: 70px;
+            height: 70px;
+            svg {
+                width: 60px;
+                height: 60px;
+            }
         }
     }
 }

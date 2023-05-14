@@ -1,18 +1,11 @@
 .logo {
-    span {
-        @apply text-3xl relative flex items-center justify-center font-medium my-2;
-
-        @media (max-width: 630px) {
-            @apply text-2xl;
+    img {
+        width: 150px;
+        @media (max-width: 700px) {
+            width: 130px;
         }
-        &::before {
-            content: '';
-            position: absolute;
-            z-index: -1;
-            width: 80px;
-            height: 100%;
-            background-color: red;
-            border-radius: 50%;
+        @media (max-width: 450px) {
+            width: 120px;
         }
     }
 }

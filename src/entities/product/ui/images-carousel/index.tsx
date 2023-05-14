@@ -39,24 +39,32 @@ export const ImagesCarousel: FC<ImagesCarouselProps> = ({
 
 	return (
 		<div className={classNames(styles.container, className)}>
-			<Swiper
-				slidesPerView={1}
-				slidesPerGroup={1}
-				modules={[Navigation]}
-				navigation={navigation}
-				onSwiper={onSwiper}
-				className={styles.swiper}
-				// breakpoints={breakpoints}
-			>
-				{images.map((imageUrl, index) => (
-					<SwiperSlide key={index} className={styles.slide}>
-						<img src={`${API_URL}/${imageUrl}`} alt='' />
-					</SwiperSlide>
-				))}
-			</Swiper>
-			<div className={styles.controllers}>
-				<SliderButton ref={navigationPrevRef} dir='left' />
-				<SliderButton ref={navigationNextRef} dir='right' />
+			<div className={styles.swiperContainer}>
+				<Swiper
+					slidesPerView={1}
+					slidesPerGroup={1}
+					modules={[Navigation]}
+					navigation={navigation}
+					onSwiper={onSwiper}
+					className={styles.swiper}
+					// breakpoints={breakpoints}
+				>
+					{images.map((imageUrl, index) => (
+						<SwiperSlide key={index} className={styles.slide}>
+							<img src={`${API_URL}/${imageUrl}`} alt='' />
+						</SwiperSlide>
+					))}
+				</Swiper>
+				<SliderButton
+					ref={navigationNextRef}
+					dir='right'
+					className={styles.rightSwiperBtn}
+				/>
+				<SliderButton
+					ref={navigationPrevRef}
+					dir='left'
+					className={styles.leftSwiperBtn}
+				/>
 			</div>
 		</div>
 	)

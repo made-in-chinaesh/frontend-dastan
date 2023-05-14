@@ -1,5 +1,5 @@
 nav {
-    @apply w-full flex flex-col;
+    @apply w-full flex;
     .top {
         @apply flex items-center justify-between py-2;
 
@@ -11,9 +11,9 @@ nav {
             }
 
             a {
-                @apply uppercase;
+                @apply text-lg transition-all hover:text-gray-400;
                 li {
-                    @apply p-2 transition-all border-b-0 hover:border-b-2 hover:border-red-500;
+                    @apply p-2;
                 }
             }
         }
@@ -41,5 +41,5 @@ nav {
 }
 
 .activeLink {
-    color: var(--color-red);
+    color: var(--color-red) !important;
 }

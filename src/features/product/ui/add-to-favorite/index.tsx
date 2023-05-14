@@ -26,7 +26,7 @@ export const AddToFavorite: FC<AddToFavoriteProps> = ({ product }) => {
 	}
 
 	return (
-		<Button colorScheme={isFavorite ? 'red' : 'cyan'} onClick={onSubmit}>
+		<Button colorScheme={isFavorite ? 'red' : 'pink'} onClick={onSubmit}>
 			{isFavorite ? 'Удалить из избранных' : 'Добавить в избранные'}
 		</Button>
 	)

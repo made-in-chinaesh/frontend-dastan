@@ -2,10 +2,13 @@ import { FC } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './styles.module.scss'
 
+// @ts-ignore
+import logoImage from 'shared/images/dastan.png'
+
 export const Logo: FC = () => {
 	return (
 		<Link className={styles.logo} to={'/'}>
-			<span>Dastan-Style</span>
+			<img src={logoImage} alt='Dastan-style' />
 		</Link>
 	)
 }

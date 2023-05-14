@@ -32,7 +32,7 @@ export const FavoriteCard: FC<FavoriteCardProps> = ({ product, onClose }) => {
 				</div>
 				<div className={styles.cardRight}>
 					<h2>{product.name}</h2>
-					<h3>{product.price}</h3>
+					<h3>{product.price} KGZ</h3>
 				</div>
 			</div>
 			<div>

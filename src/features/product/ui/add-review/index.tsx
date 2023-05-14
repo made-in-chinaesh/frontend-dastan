@@ -70,16 +70,14 @@ export const AddReview: FC<AddReviewProps> = ({ productId }) => {
 			<FormControl isInvalid={!!errors.stars?.message}>
 				<FormLabel>Ваша оценка</FormLabel>
 				<Select {...register('stars', { required: true })}>
-					<option value='1'>1</option>
-					<option value='2'>2</option>
-					<option value='3'>3</option>
-					<option value='4'>4</option>
-					<option value='5'>5</option>
+					{[1, 2, 3, 4, 5].map(number => (
+						<option value={String(number)}>{number}</option>
+					))}
 				</Select>
 			</FormControl>
 			<Button
 				className='mx-auto my-2'
-				colorScheme='twitter'
+				colorScheme='whatsapp'
 				isLoading={isLoading}
 				onClick={onSubmit}
 			>

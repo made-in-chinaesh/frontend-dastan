@@ -15,10 +15,10 @@ export const ProductInfo: FC<ProductInfoProps> = ({ product }) => {
 	return (
 		<div className={styles.container}>
 			<h2 className={styles.title}>{name}</h2>
-			<h1 className={styles.price}>{price} сом</h1>
+			<h1 className={styles.price}>{price} KGZ</h1>
 			<p className={styles.description}>{description}</p>
 			<div>
-				<FilterWrap title='Характеристики'>
+				<FilterWrap title='Характеристики товара'>
 					<Chip text={`Категория: ${category.name}`} />
 					<Chip text={`Категория для: ${categoryFor}`} />
 					{info.map(item => (

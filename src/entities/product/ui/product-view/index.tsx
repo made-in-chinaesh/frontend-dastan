@@ -24,7 +24,7 @@ export const ProductView: FC<ProductViewProps> = ({ product }) => {
 					<ProductOrder product={product} />
 				</div>
 			</div>
-			<Tabs isFitted className={styles.tabs}>
+			<Tabs isFitted colorScheme='red' className={styles.tabs}>
 				<TabList>
 					<Tab>Отзывы</Tab>
 					<Tab>Форма отзыва</Tab>
