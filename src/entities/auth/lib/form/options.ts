@@ -19,7 +19,7 @@ export const Password = {
 		message: 'Не менее 4 символов',
 	},
 	maxLength: {
-		value: 8,
-		message: 'Не более 8 символов',
+		value: 10,
+		message: 'Не более 10 символов',
 	},
 }

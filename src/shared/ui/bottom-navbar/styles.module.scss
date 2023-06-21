@@ -1,6 +1,6 @@
 .container {
     @apply hidden fixed z-10 bottom-0 left-0 bg-white border-t w-full p-2 items-center justify-center;
-    @media (max-width: 600px) {
+    @media (max-width: 770px) {
         @apply flex;
     }
     a {

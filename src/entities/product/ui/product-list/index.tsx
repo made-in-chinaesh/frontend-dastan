@@ -1,14 +1,16 @@
-import { FC } from 'react'
+import { FC, useContext } from 'react'
 import { ProductCard } from '../product-card'
 import { useGetProducts } from '../../model'
 import { Loader } from 'shared/ui'
-import { Pagination } from 'features/pagination'
+import { Pagination, paginationStore } from 'features/pagination'
 import { observer } from 'mobx-react-lite'
 
 import styles from './styles.module.scss'
 
 export const ProductList: FC = observer(() => {
 	const { products, isLoading } = useGetProducts()
+
+	const paginationModel = useContext(paginationStore)
 
 	return (
 		<div>
@@ -34,7 +36,7 @@ export const ProductList: FC = observer(() => {
 					)}
 				</>
 			)}
-			{products.length ? <Pagination /> : ''}
+			{products.length === paginationModel.limit ? <Pagination /> : ''}
 		</div>
 	)
 })

@@ -12,6 +12,7 @@ export const useCheckUser = () => {
 				if (!data) return
 
 				setPermission(data.permission)
+				localStorage.setItem('isAdmin', String(data.permission))
 			})
 			.catch(e => console.log(e))
 	}

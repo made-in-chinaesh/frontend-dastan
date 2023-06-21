@@ -19,7 +19,7 @@ export const authApiInstance = axios.create({
 export const signOutAction = () => {
 	localStorage.removeItem('accessToken')
 	localStorage.removeItem('refreshToken')
-	localStorage.removeItem('role')
+	localStorage.removeItem('isAdmin')
 
 	window.location.reload()
 }

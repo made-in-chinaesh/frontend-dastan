@@ -1,13 +1,15 @@
-import { FC } from 'react'
+import { FC, useEffect } from 'react'
 import styles from './styles.module.scss'
 import {
 	Home as HomeIcon,
 	Shop as ShopIcon,
 	Announcement as AboutIcon,
 	Phone as ContactsIcon,
+	Tool as ToolIcon,
 } from '@icon-park/react'
 import { NavLink } from 'react-router-dom'
 import { Routes } from 'shared/data-items'
+import { useCheckUser } from 'entities/auth'
 
 export const bottomNavbarItems = [
 	{
@@ -37,6 +39,17 @@ export const bottomNavbarItems = [
 ]
 
 export const BottomNavbar: FC = () => {
+	const accessToken = localStorage.getItem('accessToken')
+	const isAdmin = localStorage.getItem('isAdmin')
+
+	const {
+		actions: { checkUser },
+	} = useCheckUser()
+
+	useEffect(() => {
+		if (!isAdmin && accessToken) checkUser(accessToken)
+	}, [isAdmin, accessToken, checkUser])
+
 	return (
 		<>
 			<div className={styles.hiddenBlock}></div>
@@ -53,6 +66,19 @@ export const BottomNavbar: FC = () => {
 						<span>{name}</span>
 					</NavLink>
 				))}
+				{isAdmin === 'true' ? (
+					<NavLink
+						to='/admin'
+						className={({ isActive }) => {
+							return isActive ? styles.active : ''
+						}}
+					>
+						{<ToolIcon />}
+						<span>Админ</span>
+					</NavLink>
+				) : (
+					''
+				)}
 			</div>
 		</>
 	)

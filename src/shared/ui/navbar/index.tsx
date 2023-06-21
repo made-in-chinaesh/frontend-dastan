@@ -1,4 +1,4 @@
-import { FC, useContext } from 'react'
+import { FC, useContext, useEffect } from 'react'
 import { Logo } from '../logo'
 import { NavLink } from 'react-router-dom'
 import {
@@ -14,11 +14,23 @@ import { useDisclosure } from '@chakra-ui/react'
 import { Container } from '../container'
 
 import styles from './styles.module.scss'
+import { useCheckUser } from 'entities/auth'
 
 export const Navbar: FC = observer(() => {
 	const searchModel = useContext(searchStore)
 
 	const { isOpen, onOpen, onClose } = useDisclosure()
+
+	const accessToken = localStorage.getItem('accessToken')
+	const isAdmin = localStorage.getItem('isAdmin')
+
+	const {
+		actions: { checkUser },
+	} = useCheckUser()
+
+	useEffect(() => {
+		if (!isAdmin && accessToken) checkUser(accessToken)
+	}, [isAdmin, accessToken, checkUser])
 
 	return (
 		<>
@@ -38,6 +50,18 @@ export const Navbar: FC = observer(() => {
 									<li>{name}</li>
 								</NavLink>
 							))}
+							{isAdmin === 'true' ? (
+								<NavLink
+									to='/admin'
+									className={({ isActive }) => {
+										return isActive ? styles.activeLink : ''
+									}}
+								>
+									<li>Админ панель</li>
+								</NavLink>
+							) : (
+								''
+							)}
 						</ul>
 
 						<div className={styles.topRight}>
