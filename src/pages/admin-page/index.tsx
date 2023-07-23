@@ -7,8 +7,6 @@ const AdminPage: FC = () => {
 
 	if (!isAdmin || isAdmin === 'false') return <NotFound />
 
-	console.log(isAdmin)
-
 	return (
 		<Layout>
 			<Container>

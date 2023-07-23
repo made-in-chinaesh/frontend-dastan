@@ -1,45 +1,40 @@
 nav {
-    @apply w-full flex;
     .top {
-        @apply flex items-center justify-between py-2;
-
-        ul {
-            @apply flex items-center;
-
-            @media (max-width: 770px) {
-                @apply hidden;
-            }
-
-            a {
-                @apply text-lg transition-all hover:text-gray-400;
-                li {
-                    @apply p-2;
-                }
+        @apply border-b p-2;
+        div {
+            @apply flex items-center justify-between;
+        }
+        &Icons {
+            svg {
+                cursor: pointer;
+                width: 20px;
+                height: 20px;
+                margin-left: 5px;
             }
         }
+    }
+    .bottom {
+        @apply border-b;
 
-
-        &Right {
-            @apply flex items-center;
-            .iconGroup {
-                @apply flex items-center;
-                a {
-                    @apply flex items-center justify-center;
-                }
-                svg {
-                    @apply ml-2 cursor-pointer;
-                    width: 20px;
-                    height: 20px;
+        @media (max-width: 600px) {
+            display: none;
+        }
+        div {
+            ul {
+                @apply flex items-center justify-center;
+                li {
+                    @apply p-2;
+                    a {
+                        &:hover {
+                            @apply text-red-500;
+                        }
+                    }
                 }
             }
         }
     }
 }
 
-.section {
-    @apply w-full border-b;
-}
-
-.activeLink {
-    color: var(--color-red) !important;
+.isActive {
+    @apply text-red-500;
 }

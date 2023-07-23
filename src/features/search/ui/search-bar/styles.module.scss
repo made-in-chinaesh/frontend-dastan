@@ -1,0 +1,20 @@
+.search {
+    @apply flex justify-center w-1/2 relative;
+
+    @media (max-width: 800px) {
+        display: none !important;
+    }
+
+    .searchResults {
+        content: '';
+        @apply flex flex-col justify-start bg-white absolute w-full top-12 z-20 border rounded-lg transition-all;
+        height: auto;
+        max-height: 400px;
+        overflow: auto;
+    }
+}
+
+.loader {
+    height: 200px;
+    justify-content: center !important;
+}

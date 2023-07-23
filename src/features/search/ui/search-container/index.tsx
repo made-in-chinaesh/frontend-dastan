@@ -30,7 +30,7 @@ export const SearchContainer: FC = observer(() => {
 
 	return (
 		<div
-			className={`w-full h-screen fixed z-20 top-0 left-0 transition-transform bg-white ${
+			className={`w-full h-screen fixed overflow-auto z-20 top-0 left-0 transition-transform bg-white ${
 				searchModel.isOpen ? 'scale-1' : 'scale-0'
 			}`}
 		>
@@ -51,9 +51,7 @@ export const SearchContainer: FC = observer(() => {
 				) : !debouncedValue.length ? (
 					''
 				) : (
-					<div className='overflow-auto'>
-						<ProductsList products={products} />
-					</div>
+					<ProductsList products={products} />
 				)}
 				{debouncedValue.length && !isLoading && !products.length ? (
 					<h2 className='text-3xl text-center mt-40'>

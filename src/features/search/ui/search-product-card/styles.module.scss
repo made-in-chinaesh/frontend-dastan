@@ -1,0 +1,11 @@
+.card {
+    @apply flex items-center p-2 w-full;
+    justify-content: flex-start !important;
+    img {
+        width: 90px;
+        height: 100px;
+    }
+    h2 {
+        @apply text-sm ml-2 font-medium;
+    }
+}

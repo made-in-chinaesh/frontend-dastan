@@ -15,6 +15,7 @@ import { Container } from '../container'
 
 import styles from './styles.module.scss'
 import { useCheckUser } from 'entities/auth'
+import { SearchBar } from 'features/search/ui/search-bar'
 
 export const Navbar: FC = observer(() => {
 	const searchModel = useContext(searchStore)
@@ -35,48 +36,43 @@ export const Navbar: FC = observer(() => {
 	return (
 		<>
 			<nav>
-				<section className={styles.section}>
-					<Container className={styles.top}>
+				<div className={styles.top}>
+					<Container>
 						<Logo />
-						<ul>
-							{navigationItems.map(({ id, name, to }) => (
-								<NavLink
-									key={id}
-									to={to}
-									className={({ isActive }) => {
-										return isActive ? styles.activeLink : ''
-									}}
-								>
-									<li>{name}</li>
-								</NavLink>
-							))}
-							{isAdmin === 'true' ? (
-								<NavLink
-									to='/admin'
-									className={({ isActive }) => {
-										return isActive ? styles.activeLink : ''
-									}}
-								>
-									<li>Админ панель</li>
-								</NavLink>
-							) : (
-								''
-							)}
-						</ul>
-
-						<div className={styles.topRight}>
-							<div className={styles.iconGroup}>
-								<NavLink to={Routes.login}>
-									<UserIcon />
-								</NavLink>
-								<OvalLoveIcon onClick={onOpen} />
+						<SearchBar />
+						<div className={styles.topIcons}>
+							<NavLink to={Routes.login}>
+								<UserIcon />
+							</NavLink>
+							<OvalLoveIcon onClick={onOpen} />
+							{document.body.clientWidth <= 800 ? (
 								<SearchIcon
 									onClick={() => searchModel.open()}
 								/>
-							</div>
+							) : (
+								''
+							)}
 						</div>
 					</Container>
-				</section>
+				</div>
+				<div className={styles.bottom}>
+					<Container>
+						<ul>
+							{navigationItems.map(({ id, name, to }) => (
+								<li key={id}>
+									<NavLink
+										to={to}
+										className={({ isActive }) =>
+											isActive ? styles.isActive : ''
+										}
+									>
+										{name}
+									</NavLink>
+								</li>
+							))}
+						</ul>
+					</Container>
+				</div>
 			</nav>
 			<FavoritesDrawer isOpen={isOpen} onClose={onClose} />
 		</>
