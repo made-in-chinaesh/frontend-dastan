@@ -4,7 +4,7 @@ import { useDebounce, useHideScroll } from 'shared/hooks'
 import { searchStore, useSearchProducts } from '../../model'
 import { Input } from '@chakra-ui/react'
 import { ProductsList } from '../products-list'
-import { Close as CloseIcon } from '@icon-park/react'
+import { BsPlusLg as CloseIcon } from 'react-icons/bs'
 import { Container, Loader } from 'shared/ui'
 
 export const SearchContainer: FC = observer(() => {
@@ -37,7 +37,7 @@ export const SearchContainer: FC = observer(() => {
 			<Container className='flex flex-col'>
 				<CloseIcon
 					onClick={() => searchModel.close()}
-					className='text-2xl cursor-pointer my-2 ml-auto'
+					className='text-2xl cursor-pointer my-2 ml-auto rotate-45'
 				/>
 				<div className='flex flex-col'>
 					<h2 className='text-2xl font-medium my-2'>Поиск</h2>

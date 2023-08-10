@@ -2,7 +2,7 @@ import { FC, useContext } from 'react'
 import { FilterWrap } from 'features/filters'
 import { Chip, Loader } from 'shared/ui'
 import { categoryStore, useGetCategories } from 'entities/category'
-import { Close as CloseIcon } from '@icon-park/react'
+import { BsPlusLg as CloseIcon } from 'react-icons/bs'
 import { observer } from 'mobx-react-lite'
 import { useCategoryActions } from 'features/admin'
 
@@ -26,7 +26,7 @@ export const CategoriesList: FC = observer(() => {
 							className='w-full'
 						/>
 						<CloseIcon
-							className='ml-2 cursor-pointer'
+							className='ml-2 cursor-pointer rotate-45'
 							onClick={() => deleteCategory(item._id)}
 						/>
 					</div>

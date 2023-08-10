@@ -2,11 +2,11 @@ import { FC, useContext } from 'react'
 import { observer } from 'mobx-react-lite'
 import { paginationStore } from './model'
 import {
-	DoubleLeft as DoubleLeftIcon,
-	Left as LeftIcon,
-	DoubleRight as DoubleRightIcon,
-	Right as RightIcon,
-} from '@icon-park/react'
+	BsChevronDoubleLeft as DoubleLeftIcon,
+	BsChevronLeft as LeftIcon,
+	BsChevronDoubleRight as DoubleRightIcon,
+	BsChevronRight as RightIcon,
+} from 'react-icons/bs'
 import styles from './styles.module.scss'
 
 export const Pagination: FC = observer(() => {

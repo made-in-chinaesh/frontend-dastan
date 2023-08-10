@@ -22,7 +22,7 @@ export const AdminOptionsTabs: FC = () => {
 
 	return (
 		<>
-			<Tabs isFitted>
+			<Tabs isFitted colorScheme='gray'>
 				<TabList>
 					<Tab>Продукты</Tab>
 					<Tab>Размеры</Tab>

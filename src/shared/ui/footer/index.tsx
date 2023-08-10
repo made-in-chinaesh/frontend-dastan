@@ -3,6 +3,8 @@ import { Logo } from '../logo'
 import { Title } from '../title'
 import { Container } from '../container'
 
+import { footerItems } from '../../data-items'
+
 import styles from './styles.module.scss'
 import { Link } from 'react-router-dom'
 
@@ -37,21 +39,24 @@ export const Footer: FC = () => {
 					<div>
 						<Title className={styles.title}>Контакты</Title>
 						<ul>
-							<li>Email: dastan_style@gmail.com</li>
-							<li>
-								<a href='tel:+996554337722'>
-									Телефон номер: +996554337722
-								</a>
-							</li>
-							<li>
-								<a
-									href='https://api.whatsapp.com/send?phone=996771134803&source=website&text=Здраствуйте!&data=id%3A%20871500'
-									target='_blank'
-									rel='noreferrer'
-								>
-									WhatsApp: +996732332211
-								</a>
-							</li>
+							{footerItems.map(
+								({ id, text, icon, href, target }) => {
+									const Icon = icon
+
+									return (
+										<li key={id}>
+											<a
+												href={href}
+												target={target ? '_blank' : ''}
+												rel='noreferrer'
+											>
+												<Icon />
+												{text}
+											</a>
+										</li>
+									)
+								}
+							)}
 						</ul>
 					</div>
 				</div>

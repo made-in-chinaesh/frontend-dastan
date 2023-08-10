@@ -1,5 +1,5 @@
 import { FC, useEffect, useState } from 'react'
-import { Search as SearchIcon } from '@icon-park/react'
+import { BsSearch as SearchIcon } from 'react-icons/bs'
 import { Input, InputGroup, InputLeftElement } from '@chakra-ui/react'
 import styles from './styles.module.scss'
 import { useDebounce } from 'shared/hooks'

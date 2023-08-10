@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { IReview } from 'entities/product/index'
+import { IReview } from 'entities/product'
 import { FilterWrap } from 'features/filters'
 
 import styles from './styles.module.scss'

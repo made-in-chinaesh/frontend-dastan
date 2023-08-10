@@ -1,33 +1,41 @@
 .container {
+
     .swiperContainer {
         @apply flex items-center relative;
+
         .swiper {
             @apply my-2 border max-w-full;
+
             .slide {
                 @apply cursor-pointer;
                 max-height: 800px;
+
                 img {
                     @apply h-full w-full;
                 }
             }
         }
-        .leftSwiperBtn {
-            @apply absolute z-20 left-0 m-0 border-0 hover:bg-inherit hover:text-black;
-            width: 70px;
+
+        .btn {
+            @apply absolute z-20 border-0 bg-gray-700 rounded-xl m-0;
+            width: 40px;
             height: 70px;
             svg {
-                width: 60px;
-                height: 60px;
+                width: 40px;
+                height: 40px;
             }
+            &:disabled {
+                opacity: 70%;
+            }
+        }
+
+        .leftSwiperBtn {
+            @apply left-0 ml-2
         }
         .rightSwiperBtn {
-            @apply absolute z-20 right-0 m-0 border-0 hover:bg-inherit hover:text-black;
-            width: 70px;
-            height: 70px;
-            svg {
-                width: 60px;
-                height: 60px;
-            }
+            @apply right-0 mr-2;
         }
+
     }
+
 }

@@ -28,7 +28,7 @@ export const ProductCard: FC<ProductCardProps> = ({ product, className }) => {
 			<Title variant='h2' className={styles.title}>
 				{name}
 			</Title>
-			<span>{price} KGZ</span>
+			<span>{price} KGS</span>
 		</div>
 	)
 }

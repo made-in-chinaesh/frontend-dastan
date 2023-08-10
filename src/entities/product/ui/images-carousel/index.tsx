@@ -1,4 +1,4 @@
-import { FC, useRef } from 'react'
+import { FC, useRef, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import SwiperClass, { Navigation } from 'swiper'
 import { SliderButton } from 'shared/ui/slider-button'
@@ -16,6 +16,9 @@ export const ImagesCarousel: FC<ImagesCarouselProps> = ({
 	images,
 	className,
 }) => {
+	const [isEnd, setIsEnd] = useState(false)
+	const [isBegin, setIsBegin] = useState(true)
+
 	const navigationPrevRef = useRef<HTMLButtonElement>(null)
 	const navigationNextRef = useRef<HTMLButtonElement>(null)
 
@@ -47,7 +50,10 @@ export const ImagesCarousel: FC<ImagesCarouselProps> = ({
 					navigation={navigation}
 					onSwiper={onSwiper}
 					className={styles.swiper}
-					// breakpoints={breakpoints}
+					onSlideChange={swiper => {
+						setIsBegin(swiper.isBeginning)
+						setIsEnd(swiper.isEnd)
+					}}
 				>
 					{images.map((imageUrl, index) => (
 						<SwiperSlide key={index} className={styles.slide}>
@@ -56,14 +62,16 @@ export const ImagesCarousel: FC<ImagesCarouselProps> = ({
 					))}
 				</Swiper>
 				<SliderButton
-					ref={navigationNextRef}
-					dir='right'
-					className={styles.rightSwiperBtn}
-				/>
-				<SliderButton
 					ref={navigationPrevRef}
 					dir='left'
-					className={styles.leftSwiperBtn}
+					disabled={isBegin}
+					className={classNames(styles.btn, styles.leftSwiperBtn)}
+				/>
+				<SliderButton
+					ref={navigationNextRef}
+					dir='right'
+					disabled={isEnd}
+					className={classNames(styles.btn, styles.rightSwiperBtn)}
 				/>
 			</div>
 		</div>

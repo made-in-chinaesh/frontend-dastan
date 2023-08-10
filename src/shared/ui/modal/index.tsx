@@ -52,11 +52,15 @@ export const Modal: FC<PropsWithChildren<ModalProps>> = ({
 				<ModalHeader>{title}</ModalHeader>
 				<ModalBody className={styles.modalBody}>{children}</ModalBody>
 				<ModalFooter>
-					<Button colorScheme='red' onClick={onClose}>
+					<Button
+						colorScheme='red'
+						variant='outline'
+						onClick={onClose}
+					>
 						Закрыть
 					</Button>
 					<Button
-						colorScheme='facebook'
+						variant='outline'
 						onClick={onClick}
 						ml={2}
 						isLoading={isLoading}

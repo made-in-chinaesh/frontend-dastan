@@ -14,7 +14,7 @@ export const ProductsList: FC<ProductsListProps> = ({ products }) => {
 	return (
 		<div className={styles.list}>
 			{products.map(product => (
-				<div key={product._id} onClick={searchModel.close}>
+				<div key={product._id} onClick={() => searchModel.close()}>
 					<ProductCard
 						product={product}
 						className={styles.listCard}

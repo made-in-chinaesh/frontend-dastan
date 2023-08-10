@@ -1,12 +1,12 @@
 import { FC, useEffect } from 'react'
 import styles from './styles.module.scss'
 import {
-	Home as HomeIcon,
-	Shop as ShopIcon,
-	Announcement as AboutIcon,
-	Phone as ContactsIcon,
-	Tool as ToolIcon,
-} from '@icon-park/react'
+	BsHouse as HomeIcon,
+	BsHandbag as ShopIcon,
+	BsLayoutTextSidebarReverse as AboutIcon,
+	BsPhone as PhoneIcon,
+	BsTools as ToolIcon,
+} from 'react-icons/bs'
 import { NavLink } from 'react-router-dom'
 import { Routes } from 'shared/data-items'
 import { useCheckUser } from 'entities/auth'
@@ -34,7 +34,7 @@ export const bottomNavbarItems = [
 		id: 4,
 		to: Routes.contacts,
 		name: 'Контакты',
-		icon: <ContactsIcon />,
+		icon: <PhoneIcon />,
 	},
 ]
 

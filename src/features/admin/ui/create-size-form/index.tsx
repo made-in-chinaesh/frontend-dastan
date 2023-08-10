@@ -9,7 +9,7 @@ import {
 import { Forms } from 'features/admin/lib'
 import { useForm } from 'react-hook-form'
 import { ICreateSize } from 'entities/product-sizes'
-import { useSizeActions } from 'features/admin/model'
+import { useSizeActions } from 'features/admin'
 
 export const CreateSizeForm: FC = () => {
 	const {
@@ -45,7 +45,7 @@ export const CreateSizeForm: FC = () => {
 				</FormErrorMessage>
 			</FormControl>
 			<Button
-				colorScheme='teal'
+				variant='outline'
 				className='mx-auto my-4'
 				onClick={onSubmit}
 				isLoading={isLoadingCreateSize}

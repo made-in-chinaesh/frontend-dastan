@@ -2,7 +2,7 @@ import { FC } from 'react'
 import styles from './styles.module.scss'
 import { Title } from 'shared/ui/title'
 import { Button } from '@chakra-ui/react'
-import { Left } from '@icon-park/react'
+import { BsChevronLeft as LeftIcon } from 'react-icons/bs'
 import { useNavigate } from 'react-router-dom'
 
 export const NotFound: FC = () => {
@@ -21,7 +21,7 @@ export const NotFound: FC = () => {
 				<Button
 					className={styles.containerBlockButton}
 					colorScheme='red'
-					leftIcon={<Left />}
+					leftIcon={<LeftIcon />}
 					onClick={() => navigate('/')}
 				>
 					Вернуться на главную

@@ -3,7 +3,7 @@ import { createContext } from 'react'
 
 class PaginationStore {
 	_page = 1
-	_limit = 10
+	_limit = 4
 	_totalCount = 0
 	constructor() {
 		makeAutoObservable(this)

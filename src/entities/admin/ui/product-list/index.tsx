@@ -25,7 +25,10 @@ export const ProductList: FC = observer(() => {
 				<>
 					<div className={styles.list}>
 						{products.map(item => (
-							<div key={item._id} className='flex flex-col'>
+							<div
+								key={item._id}
+								className='flex flex-col justify-between'
+							>
 								<ProductCard
 									className={styles.card}
 									product={item}

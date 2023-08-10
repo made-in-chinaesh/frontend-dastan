@@ -45,7 +45,7 @@ export const CreateCategoryForm: FC = () => {
 				</FormErrorMessage>
 			</FormControl>
 			<Button
-				colorScheme='teal'
+				variant='outline'
 				className='mx-auto my-4'
 				onClick={onSubmit}
 				isLoading={isLoadingCreateCategory}

@@ -1,7 +1,7 @@
 import { FC, PropsWithChildren, useState } from 'react'
 import styles from './styles.module.scss'
 import classNames from 'classnames'
-import { Down as DownIcon } from '@icon-park/react'
+import { BsChevronDown as DownIcon } from 'react-icons/bs'
 
 interface FilterWrapProps {
 	title: string

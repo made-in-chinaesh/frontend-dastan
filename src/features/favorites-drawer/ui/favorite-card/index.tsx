@@ -2,9 +2,10 @@ import { FC } from 'react'
 import { IProduct } from 'entities/product'
 import { API_URL } from 'shared/config'
 import { useFavoriteActions } from 'features/product'
-import { Close as CloseIcon } from '@icon-park/react'
+import { BsPlusLg as CloseIcon } from 'react-icons/bs'
 
 import styles from './styles.module.scss'
+import classNames from 'classnames'
 
 interface FavoriteCardProps {
 	product: IProduct
@@ -37,7 +38,7 @@ export const FavoriteCard: FC<FavoriteCardProps> = ({ product, onClose }) => {
 			</div>
 			<div>
 				<CloseIcon
-					className={styles.closeIcon}
+					className={classNames(styles.closeIcon, 'rotate-45')}
 					onClick={() => deleteFavorite(product._id)}
 				/>
 			</div>

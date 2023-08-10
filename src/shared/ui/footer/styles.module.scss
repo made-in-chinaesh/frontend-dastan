@@ -16,8 +16,20 @@
 
     ul {
         @apply leading-8;
+
         li {
-            @apply font-medium;
+            @apply flex items-center font-medium;
+            a {
+                @apply flex items-center text-yellow-400;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            svg {
+                width: 20px;
+                height: 20px;
+                margin-right: 8px;
+            }
         }
     }
 

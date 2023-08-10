@@ -12,7 +12,7 @@ export const ProductListHeading: FC<ProductListHeadingProps> = ({ onOpen }) => {
 	return (
 		<div className={styles.heading}>
 			<Title className={styles.headingTitle}>Продукты</Title>
-			<Button colorScheme='facebook' onClick={onOpen}>
+			<Button colorScheme='facebook' variant='outline' onClick={onOpen}>
 				Добавить продукт
 			</Button>
 		</div>

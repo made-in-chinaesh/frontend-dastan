@@ -36,7 +36,8 @@ export const ProductList: FC = observer(() => {
 					)}
 				</>
 			)}
-			{products.length === paginationModel.limit ? <Pagination /> : ''}
+			{/*{paginationModel.page > 1 ? }*/}
+			<Pagination />
 		</div>
 	)
 })

@@ -1,7 +1,7 @@
 import { FC, useContext } from 'react'
 import { FilterWrap } from 'features/filters'
 import { Chip, Loader } from 'shared/ui'
-import { Close as CloseIcon } from '@icon-park/react'
+import { BsPlusLg as CloseIcon } from 'react-icons/bs'
 import { sizeStore, useGetSizes } from 'entities/product-sizes'
 import { observer } from 'mobx-react-lite'
 import { useSizeActions } from 'features/admin'
@@ -26,7 +26,7 @@ export const SizesList: FC = observer(() => {
 							className='w-full'
 						/>
 						<CloseIcon
-							className='ml-2 cursor-pointer'
+							className='ml-2 cursor-pointer rotate-45'
 							onClick={() => deleteSize(item._id)}
 						/>
 					</div>

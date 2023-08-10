@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import { Button } from '@chakra-ui/react'
-import { Right } from '@icon-park/react'
+import { BsChevronRight as RightIcon } from 'react-icons/bs'
 import { useNavigate } from 'react-router-dom'
 import { Container } from 'shared/ui'
 
@@ -23,7 +23,7 @@ export const HomeBanner: FC = () => {
 					<Button
 						colorScheme='red'
 						className={styles.btn}
-						rightIcon={<Right />}
+						rightIcon={<RightIcon />}
 						onClick={() => navigate('/products')}
 					>
 						Начать покупки

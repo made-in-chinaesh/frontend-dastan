@@ -5,4 +5,4 @@ const getEnvVar = (key: string) => {
 	return process.env[key] ?? ''
 }
 
-export const API_URL = getEnvVar('REACT_APP_API_URL')
+export const API_URL = 'http://176.126.166.180:5000/'

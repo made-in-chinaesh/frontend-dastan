@@ -1,3 +1,12 @@
+import {
+	BsMailbox as MailIcon,
+	BsTelephone as TelephoneIcon,
+	BsWhatsapp as WhatsAppIcon,
+	BsTiktok as TokTokIcon,
+	BsInstagram as InstagramIcon,
+} from 'react-icons/bs'
+import { Component, ReactElement } from 'react'
+
 export const categoriesForItems = [
 	{
 		id: 1,
@@ -83,6 +92,44 @@ export const navigationItems = [
 		id: 4,
 		to: '/contacts',
 		name: 'Контакты',
+	},
+]
+
+export const footerItems = [
+	{
+		id: 1,
+		text: 'dastan_style@gmail.com',
+		href: 'https://mail.ru',
+		target: true,
+		icon: MailIcon,
+	},
+	{
+		id: 2,
+		text: '+996554337722',
+		href: 'https://api.whatsapp.com/send?phone=996771134803&source=website&text=Здраствуйте!&data=id%3A%20871500',
+		target: false,
+		icon: TelephoneIcon,
+	},
+	{
+		id: 3,
+		text: '+996554337722',
+		href: 'https://api.whatsapp.com/send?phone=996771134803&source=website&text=Здраствуйте!&data=id%3A%20871500',
+		target: true,
+		icon: WhatsAppIcon,
+	},
+	{
+		id: 4,
+		text: '@dastanstyle',
+		href: 'https://www.tiktok.com/@dastanstyle',
+		target: true,
+		icon: TokTokIcon,
+	},
+	{
+		id: 5,
+		text: 'dastan_style_osh',
+		href: 'https://instagram.com/dastan_style_osh?igshid=MzRlODBiNWFlZA==',
+		target: true,
+		icon: InstagramIcon,
 	},
 ]
 

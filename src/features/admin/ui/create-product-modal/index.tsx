@@ -64,7 +64,7 @@ export const CreateProductModal: FC<CreateProductModalProps> = ({
 			size={Size.xl}
 			isLoading={isLoadingCreateProduct}
 		>
-			<Tabs isFitted variant='enclosed'>
+			<Tabs isFitted variant='enclosed' colorScheme='gray'>
 				<TabList>
 					<Tab>Формы</Tab>
 					<Tab>Изображения</Tab>

@@ -1,5 +1,8 @@
 import { ButtonHTMLAttributes, forwardRef } from 'react'
-import { Left, Right } from '@icon-park/react'
+import {
+	BsChevronLeft as LeftIcon,
+	BsChevronRight as RightIcon,
+} from 'react-icons/bs'
 import styles from './styles.module.scss'
 import classNames from 'classnames'
 
@@ -15,7 +18,7 @@ export const SliderButton = forwardRef<HTMLButtonElement, SliderButtonProps>(
 				className={classNames(styles.btn, className)}
 				{...props}
 			>
-				{dir === 'left' ? <Left /> : <Right />}
+				{dir === 'left' ? <LeftIcon /> : <RightIcon />}
 			</button>
 		)
 	}

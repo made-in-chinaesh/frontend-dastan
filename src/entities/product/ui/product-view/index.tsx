@@ -24,15 +24,19 @@ export const ProductView: FC<ProductViewProps> = ({ product }) => {
 					<ProductOrder product={product} />
 				</div>
 			</div>
-			<Tabs isFitted colorScheme='red' className={styles.tabs}>
+			<Tabs isFitted colorScheme='gray' className={styles.tabs}>
 				<TabList>
-					<Tab>Отзывы</Tab>
+					{product.reviews.length ? <Tab>Отзывы</Tab> : ''}
 					<Tab>Форма отзыва</Tab>
 				</TabList>
 				<TabPanels>
-					<TabPanel>
-						<ReviewsList reviews={product.reviews} />
-					</TabPanel>
+					{product.reviews.length ? (
+						<TabPanel>
+							<ReviewsList reviews={product.reviews} />
+						</TabPanel>
+					) : (
+						''
+					)}
 					<TabPanel>
 						<AddReview productId={product._id} />
 					</TabPanel>

@@ -2,10 +2,10 @@ import { FC, useContext, useEffect } from 'react'
 import { Logo } from '../logo'
 import { NavLink } from 'react-router-dom'
 import {
-	User as UserIcon,
-	OvalLove as OvalLoveIcon,
-	Search as SearchIcon,
-} from '@icon-park/react'
+	BsPerson as UserIcon,
+	BsHeart as HeartIcon,
+	BsSearch as SearchIcon,
+} from 'react-icons/bs'
 import { searchStore } from 'features/search'
 import { observer } from 'mobx-react-lite'
 import { navigationItems, Routes } from 'shared/data-items'
@@ -44,7 +44,7 @@ export const Navbar: FC = observer(() => {
 							<NavLink to={Routes.login}>
 								<UserIcon />
 							</NavLink>
-							<OvalLoveIcon onClick={onOpen} />
+							<HeartIcon onClick={onOpen} />
 							{document.body.clientWidth <= 800 ? (
 								<SearchIcon
 									onClick={() => searchModel.open()}
